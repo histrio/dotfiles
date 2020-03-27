@@ -1,0 +1,33 @@
+[user]
+	email = rinat.sabitov@gmail.com
+	name = Rinat Sabitov
+
+[alias]
+    ll = log --oneline --decorate --date=short --graph
+    st = status -s
+    ci = commit --verbose
+    co = checkout
+    cob = checkout -b
+    br = branch 
+    diff = diff --word-diff
+	pub = !git commit -a -s --amend --no-edit && git review
+
+[gitreview]
+	username = rsabitov
+	remote = origin
+
+[core]
+	compression = 1
+	excludesfile = ~/.gitignore
+    editor = "vim"
+
+[difftool]
+    trustExitCode = true
+
+[commit]
+	verbose = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
