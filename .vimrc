@@ -3,7 +3,7 @@
 " vim config
 " author Rinat Sabitov aka histrio
 " created: Nov 2010
-" modified: Sep 2016
+" modified: Apr 2019
 " =======oOO======OOo======
 
 
@@ -30,17 +30,24 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ajh17/VimCompletesMe'
 Plugin 'nathanaelkane/vim-indent-guides'
 
-"lugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'fatih/vim-go'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'baverman/vial'
 Plugin 'baverman/vial-http'
-Plugin 'mileszs/ack.vim'
+"Plugin 'mileszs/ack.vim'
+"
+" Themes
 Plugin 'morhetz/gruvbox'
+Plugin 'arcticicestudio/nord-vim'
+"Plugin 'w0ng/vim-hybrid'
+"Plugin 'sickill/vim-monokai'
+"Plugin 'dracula/vim', { 'name': 'dracula' }
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 
@@ -104,10 +111,17 @@ nnoremap <S-Tab> :bprevious<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 cnoreabbrev W w
+cnoreabbrev Wq wq
 imap jj <esc>
 nnoremap <c-p> :FZF<cr>
 nnoremap <C-g> :Rg<cr>
 
-silent! colorscheme gruvbox
-set background=dark
 set relativenumber
+
+set termguicolors
+"set t_Co=256
+"set t_AB=^[[48;5;%dm
+"set t_AF=^[[38;5;%dm
+set background=dark
+"silent! colorscheme gruvbox
+colorscheme nord
