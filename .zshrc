@@ -3,7 +3,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export GOPATH=${HOME}/go
-export PATH=$PATH:$GOPATH/bin:$HOME/bin:${HOME}/.cargo/bin
+export PATH=$PATH:$GOPATH/bin:$HOME/bin:${HOME}/.cargo/bin:${HOME}/.fzf/bin/
 export ZSH="${HOME}/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
