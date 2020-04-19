@@ -124,4 +124,4 @@ set termguicolors
 "set t_AF=^[[38;5;%dm
 set background=dark
 "silent! colorscheme gruvbox
-colorscheme nord
+silent! colorscheme nord
