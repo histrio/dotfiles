@@ -14,7 +14,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_UPDATE_PROMPT="true"
 # DISABLE_MAGIC_FUNCTIONS=true
 
-plugins=(git fzf)
+plugins=(git fzf autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,8 +38,12 @@ setopt HIST_BEEP
 
 
 alias ssh='TERM=xterm-256color ssh'
+alias vim='TERM=xterm-256color vim'
 alias ll="exa --long"
 alias ls="exa"
+alias clvpn='bash ~/Dropbox/Cloudlinux/vpn.sh'
+alias clkeys='bash ~/Dropbox/Cloudlinux/keys.sh'
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

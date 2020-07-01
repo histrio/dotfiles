@@ -109,6 +109,7 @@ nnoremap Q <Nop>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <S-F2> :NERDTreeToggle<CR>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 cnoreabbrev W w
 cnoreabbrev Wq wq
@@ -116,12 +117,22 @@ imap jj <esc>
 nnoremap <c-p> :FZF<cr>
 nnoremap <C-g> :Rg<cr>
 
-set relativenumber
+" set relativenumber
+set foldmethod=marker
+
 
 set termguicolors
-"set t_Co=256
-"set t_AB=^[[48;5;%dm
-"set t_AF=^[[38;5;%dm
 set background=dark
 "silent! colorscheme gruvbox
 silent! colorscheme nord
+
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['flake8']
