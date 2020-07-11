@@ -3,9 +3,7 @@
 " vim config
 " author Rinat Sabitov aka histrio
 " created: Nov 2010
-" modified: Apr 2019
 " =======oOO======OOo======
-
 
 set nocompatible
 filetype off
@@ -27,11 +25,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Raimondi/delimitMate'
 Plugin 'takac/vim-hardtime'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'ajh17/VimCompletesMe'
 Plugin 'nathanaelkane/vim-indent-guides'
 
-"Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 Plugin 'fatih/vim-go'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -39,6 +34,15 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'baverman/vial'
 Plugin 'baverman/vial-http'
 "Plugin 'mileszs/ack.vim'
+Plugin 'wsdjeg/vim-fetch'
+
+"Snippets
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'ajh17/VimCompletesMe'
+
+"Complete
+"Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 "
 " Themes
 Plugin 'morhetz/gruvbox'
@@ -120,19 +124,20 @@ nnoremap <C-g> :Rg<cr>
 " set relativenumber
 set foldmethod=marker
 
-
 set termguicolors
 set background=dark
 "silent! colorscheme gruvbox
 silent! colorscheme nord
 
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
+
+let g:vcm_tab_complete = 'vim'
+let g:NERDTreeGitStatusWithFlags = 1

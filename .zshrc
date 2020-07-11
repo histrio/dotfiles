@@ -21,11 +21,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='nvim'
+ fi
 
 setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -39,10 +39,14 @@ setopt HIST_BEEP
 
 alias ssh='TERM=xterm-256color ssh'
 alias vim='TERM=xterm-256color vim'
+alias vimdiff='TERM=xterm-256color vimdiff'
 alias ll="exa --long"
 alias ls="exa"
 alias clvpn='bash ~/Dropbox/Cloudlinux/vpn.sh'
 alias clkeys='bash ~/Dropbox/Cloudlinux/keys.sh'
+alias cldev='DEVSERVER=192.168.249.5 make -C ~/projects/devdocker ssh'
+alias nv='nvim'
+alias vim='nvim'
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
