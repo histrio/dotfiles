@@ -45,8 +45,9 @@ alias ls="exa"
 alias clvpn='bash ~/Dropbox/Cloudlinux/vpn.sh'
 alias clkeys='bash ~/Dropbox/Cloudlinux/keys.sh'
 alias cldev='DEVSERVER=192.168.249.5 make -C ~/projects/devdocker ssh'
-alias nv='nvim'
-alias vim='nvim'
+alias nv='TERM=xterm-256color nvim'
+alias nvim='TERM=xterm-256color nvim'
+alias vim='TERM=xterm-256color nvim'
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

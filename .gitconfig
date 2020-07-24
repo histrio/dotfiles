@@ -19,7 +19,8 @@
 [core]
 	compression = 1
 	excludesfile = ~/.gitignore
-    editor = "vim"
+	editor = nvim
+    pager = delta
 
 [difftool]
     trustExitCode = true
@@ -31,3 +32,12 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+
+[interactive]
+    diffFilter = delta --color-only
+
+;[delta]
+    ;features = decorations
+    ;whitespace-error-style = 22 reverse
+[pull]
+	ff = only
